@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+
+    <!-- title -->
+    <title>About Us - SHOPHUT</title>
+
+    <!-- link css file style.css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
+
+    <!-- Rating -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
+    <!-- header -->
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <!-- logo -->
+                    <a href="index.html"><img src="shophut.png" width="125px"></a>
+                </div>
+                <!-- navbar -->
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <!-- cart -->
+                <a href="cart.html"><img src="cart.png" width="30px" height="30px"></a>
+                <!-- menu-icon -->
+                <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+<!---------------------About Us Section---------------------->
+        <div class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id deserunt, quia assumenda, temporibus consectetur labore iure quibusdam perspiciatis repellat nulla ipsum. Nesciunt officiis neque animi nulla nobis adipisci quae reiciendis error sunt repellendus, rem, voluptas placeat dicta at modi. Nostrum magni porro facere dicta et minus quisquam rem sapiente neque.</p>
+            </div>
+        </div>
+        <div class="team-section">
+            <div class="container">
+                <h2>Our Team</h2>
+                <div class="team-member">
+                    <img src="user-1.png" alt="Team Member 1">
+                    <h3>Seam Parker</h3>
+                    <p>Cofounder</p>
+                </div>
+                <div class="team-member">
+                    <img src="user-2.png" alt="Team Member 2">
+                    <h3>Jane Smith</h3>
+                    <p>Marketing Manager</p>
+                </div>
+                <div class="team-member">
+                    <img src="user-3.png" alt="Team Member 2">
+                    <h3>Jane Parker</h3>
+                    <p>Marketing Manager</p>
+                </div>
+            </div>
+        </div>
+<!-------------------Footer------------------>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="play-store.png">
+                        <img src="app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="shophut.png">
+                    <p>
+                        Our Purpose Is To Sustainbly make the pleasure and Benifits of Sports Accessible to the many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023 - Shophut</p>
+        </div>
+    </div>
+<!----------------js for toggle menu----------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+                {
+                    MenuItems.style.maxHeight = "200px";
+                }
+            else
+                {
+                    MenuItems.style.maxHeight = "0px";
+                }
+        }
+    </script>
+
+    <!----------------js for product gallery------------------>
+    <script>
+        const ProductImg = document.getElementById("ProductImg");
+        const SmallImg = document.getElementsByClassName("small-img");
+
+        for (let i = 0; i < SmallImg.length; i++) {
+        SmallImg[i].addEventListener('click', function () {
+            ProductImg.src = this.src;
+        });
+    }
+    </script>
 </body>
 </html>
